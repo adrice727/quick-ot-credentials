@@ -1,0 +1,102 @@
+* {
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.main form {
+    width: 100%;
+}
+
+.main form .input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.main form .input-container .label {
+  font-size: 12px;
+  width: 100%;
+  text-align: left;
+}
+
+.main form .input-container input {
+    font-size: 14px;
+    padding: 10px 10px;
+    margin: 10px 0;
+    width: 100%;
+    font-weight: 300;
+}
+
+.btn {
+    font-size: 14px;
+    border: 1px solid #333333;
+    color: #333333;
+    border-radius: 4px;
+    width: 200px;
+    padding: 10px 0;
+    background-color: white;
+    cursor: pointer;
+}
+
+.credentials {
+    background-color: #f7f7f7;
+    border-radius: 4px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 85%
+}
+
+.credentials .container {
+    margin: 10px 0;
+}
+
+.credentials .container .copy {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-left: 5px;
+  background-image: url('../images/copy-icon.png');
+  background-size: contain;
+  cursor: pointer;
+}
+
+.credentials .container .code {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 12px;
+    font-weight: 300;
+    overflow: hidden;
+}
+
+.logo {
+  margin-top: 10px;
+  height: 40px;
+  width: 40px;
+}

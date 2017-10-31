@@ -1,0 +1,25 @@
+{
+  "name": "quick-opentok-credentials",
+  "version": "1.0.0",
+  "description": "A faster way to generate OpenTok session credentials",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/adrice727/quick-ot-credentials",
+  "keywords": [
+    "opentok",
+    "election"
+  ],
+  "author": "adrice727@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "~1.7.8"
+  },
+  "dependencies": {
+    "copy-to-clipboard": "^3.0.8",
+    "electron-json-storage": "^4.0.2",
+    "electron-store": "^1.3.0",
+    "opentok": "^2.6.0"
+  }
+}

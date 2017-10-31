@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400|Source+Code+Pro:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Quick OpenTok Credentials</title>
+</head>
+
+<body>
+
+    <h1>OT Credentials</h1>
+
+    <div class="main">
+
+        <form id="credentialsForm">
+            <div class="input-container">
+                <div class="label">API KEY</div>
+                <input id="apiKeyInput" type="text" placeholder="OpenTok API Key" maxlength=8 minlength=8 required>
+            </div>
+            <div class="input-container">
+                <div class="label">API SECRET</div>
+                <input id="apiSecretInput" type="text" placeholder="OpenTok API Secret" maxlength=40 minlength=40 required>
+            </div>
+            <div class="input-container">
+                <input type="submit" class="btn" value="Generate Credentials">
+            </div>
+        </form>
+
+        <div id="credentials" class="credentials hidden">
+            <div class="container">
+                <span class="label">API KEY</span><span id="copyApiKey" class="copy"></span>
+                <div id="apiKey" class="code"></div>
+            </div>
+            <div class="container">
+                <span class="label">SESSION ID</span><span id="copySessionId" class="copy"></span>
+                <div id="sessionId" class="code"></div>
+            </div>
+            <div class="container">
+                <span class="label">TOKEN</span><span id="copyToken" class="copy"></span>
+                <div id="token" class="code"></div>
+            </div>
+        </div>
+
+        <img class="logo" src="images/tokbox.png" alt="tokbox">
+
+    </div>
+
+    <script>
+        // You can also require other files to run in this process
+        require('./js/app.js')
+        require('./renderer.js')
+    </script>
+</body>
+
+</html>
