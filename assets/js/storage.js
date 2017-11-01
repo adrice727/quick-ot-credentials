@@ -10,7 +10,7 @@ const addCredentials = (apiKeyAndSecret) => {
 
 const retrieveMostRecentCredentials = () => {
   const existing = store.get('credentials', {});
-  return Object.values(existing).sort((a, b) => a.timestamp > b.timestamp)[0];
+  return Object.values(existing).sort((a, b) => a.timestamp < b.timestamp)[0];
 };
 
 const retrieveCredentialsForApiKey = apiKey => {
