@@ -32,16 +32,6 @@ const generateCredentials = (credentials) =>
     });
   });
 
-const generateNewToken = () => {
-  const credentials = storage.retrieveMostRecentCredentials();
-  if (!credentials) {
-    return null;
-  }
-  const { apiKey, apiSecret, sessionId } = credentials;
-  const ot = createInstance(apiKey, apiSecret);
-  const token = ot.generateToken(sessionId);
-  return { apiKey, apiSecret, sessionId, token };
-};
 
 const generateFromMostRecent = () => {
   const credentials = storage.retrieveMostRecentCredentials();
@@ -58,6 +48,5 @@ const generateFromMostRecent = () => {
 
 module.exports = {
   generateCredentials,
-  generateNewToken,
   generateFromMostRecent
 };

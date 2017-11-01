@@ -43,7 +43,7 @@ const app = () => {
     const apiSecret = $apiSecretInput.value;
     const tokenOnly = $tokenOnlyInput.checked;
     if (tokenOnly) {
-      displayCredentials(opentok.generateNewToken());
+      displayCredentials(opentok.generateFromMostRecent());
     } else {
       opentok.generateCredentials({ apiKey, apiSecret })
         .then(displayCredentials)
