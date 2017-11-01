@@ -1,5 +1,6 @@
 # Quick OT Credentials
 
+![logo](./assets/images/tokbox.png)
 #### An electron application for quickly generating OpenTok session credentials.
 
 
