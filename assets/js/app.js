@@ -56,7 +56,6 @@ const app = () => {
     const id = e.target.id;
     switch (id) {
       case 'copyApiKey':
-
         copy($apiKey.innerText);
         alert('API Key copied to clipboard.');
         break;
@@ -87,3 +86,4 @@ const app = () => {
 
 
 document.addEventListener('DOMContentLoaded', app);
+
