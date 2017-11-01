@@ -5,8 +5,6 @@ const defaultSessionOptions = { mediaMode: 'routed' };
 
 const createInstance = (apiKey, apiSecret) => new OpenTok(apiKey, apiSecret);
 
-const createToken = (ot, sessionId) => ot.generateToken(sessionId);
-
 const createSession = (credentials = storage.retrieveMostRecentCredentials()) =>
   new Promise((resolve, reject) => {
     const { apiKey, apiSecret } = credentials;
@@ -34,6 +32,17 @@ const generateCredentials = (credentials) =>
     });
   });
 
+const generateNewToken = () => {
+  const credentials = storage.retrieveMostRecentCredentials();
+  if (!credentials) {
+    return null;
+  }
+  const { apiKey, apiSecret, sessionId } = credentials;
+  const ot = createInstance(apiKey, apiSecret);
+  const token = ot.generateToken(sessionId);
+  return { apiKey, apiSecret, sessionId, token };
+};
+
 const generateFromMostRecent = () => {
   const credentials = storage.retrieveMostRecentCredentials();
   if (!credentials) {
@@ -49,5 +58,6 @@ const generateFromMostRecent = () => {
 
 module.exports = {
   generateCredentials,
+  generateNewToken,
   generateFromMostRecent
 };

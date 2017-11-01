@@ -42,9 +42,9 @@ h1 {
 }
 
 .main form .input-container .label {
-  font-size: 12px;
-  width: 100%;
-  text-align: left;
+    font-size: 12px;
+    width: 100%;
+    text-align: left;
 }
 
 .main form .input-container input {
@@ -53,6 +53,20 @@ h1 {
     margin: 10px 0;
     width: 100%;
     font-weight: 300;
+}
+
+.main form .input-container.small {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.main form .input-container.small .label {
+    width: initial;
+}
+
+.main form .input-container.small input {
+    width: 20px;
+    margin-right: 5px;
 }
 
 .btn {
@@ -79,13 +93,13 @@ h1 {
 }
 
 .credentials .container .copy {
-  width: 12px;
-  height: 12px;
-  display: inline-block;
-  margin-left: 5px;
-  background-image: url('../images/copy-icon.png');
-  background-size: contain;
-  cursor: pointer;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-left: 5px;
+    background-image: url('../images/copy-icon.png');
+    background-size: contain;
+    cursor: pointer;
 }
 
 .credentials .container .code {
@@ -97,7 +111,7 @@ h1 {
 }
 
 .logo {
-  margin-top: 10px;
-  height: 40px;
-  width: 40px;
+    margin-top: 10px;
+    height: 40px;
+    width: 40px;
 }

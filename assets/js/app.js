@@ -6,6 +6,7 @@ const app = () => {
   const $credentialsForm = document.getElementById('credentialsForm');
   const $apiKeyInput = document.getElementById('apiKeyInput');
   const $apiSecretInput = document.getElementById('apiSecretInput');
+  const $tokenOnlyInput = document.getElementById('tokenOnlyInput');
   const $credentials = document.getElementById('credentials');
   const $apiKey = document.getElementById('apiKey');
   const $sessionId = document.getElementById('sessionId');
@@ -40,9 +41,14 @@ const app = () => {
     e.preventDefault();
     const apiKey = $apiKeyInput.value;
     const apiSecret = $apiSecretInput.value;
-    opentok.generateCredentials({ apiKey, apiSecret })
-      .then(displayCredentials)
-      .catch(error => alert(error));
+    const tokenOnly = $tokenOnlyInput.checked;
+    if (tokenOnly) {
+      displayCredentials(opentok.generateNewToken());
+    } else {
+      opentok.generateCredentials({ apiKey, apiSecret })
+        .then(displayCredentials)
+        .catch(error => alert(error));
+    }
   };
 
   const copyToClipboard = (e) => {
