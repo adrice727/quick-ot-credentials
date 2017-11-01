@@ -1,6 +1,6 @@
 # Quick OT Credentials
 
-####An electron application for quickly generating OpenTok session credentials.
+#### An electron application for quickly generating OpenTok session credentials.
 
 
 To run:
