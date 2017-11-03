@@ -4,7 +4,7 @@
   "description": "A faster way to generate OpenTok session credentials",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
+    "start": "ELECTRON_ENV=development electron .",
     "build-app": "electron-packager ./ \"Quick OT Credentials\" --platform=darwin --icon=assets/icons/mac/icon.icns"
   },
   "repository": "https://github.com/adrice727/quick-ot-credentials",
